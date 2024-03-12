@@ -1,10 +1,13 @@
 package telran.util;
 
+import java.util.Arrays;
+
 public class ArraysInt {
 	
 	public static int[] addNumber(int[] array, int number) {
-		//TODO apply method copyOf class Arrays
-		return null;
+		int[]newArray = Arrays.copyOf(array, array.length+1);
+		newArray[newArray.length-1]=number;
+		return newArray;
 	}
 	public static int[] insertNumber(int[] array,int index,  int number) {
 		//TODO apply method arraycopy of class System

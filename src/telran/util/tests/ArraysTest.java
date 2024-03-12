@@ -25,7 +25,7 @@ class ArraysTest {
 		assertArrayEquals(arrayExpected, arrayActual);
 	}
 	@Test
-	void insertNumberText() {
+	void insertNumberTest() {
 		int[] arrayExpectedLast = {10, 25, 30, 40, 100, 25};
 		int[] arrayExpectedFirst = { 25, 10, 25, 30, 40, 100};
 		int[] arrayExpectedMiddle = { 10, 25, 30, 25, 40, 100};
@@ -38,7 +38,7 @@ class ArraysTest {
 		assertArrayEquals (arrayExpectedMiddle, arrayActualMiddle);
 	}
 	@Test
-	void removeNumberText() {
+	void removeNumberTest() {
 		int[] arrayExpectedLast = {10, 25, 30, 40};
 		int[] arrayExpectedFirst = { 25, 30, 40, 100};
 		int[] arrayExpectedMiddle = { 10, 25, 40, 100};
@@ -52,7 +52,7 @@ class ArraysTest {
 	
 	}
 	@Test
-	void insertSortedText() {
+	void insertSortedTest() {
 		int[] arrayExpectedLast = {10, 25, 30, 40, 100, 150};
 		int[] arrayExpectedFirst = { 10,10, 25, 30, 40, 100};
 		int[] arrayExpectedMiddle = { 10, 25, 30, 35, 40, 100};
