@@ -10,7 +10,7 @@ public class ArraysInt {
 		return newArray;
 	}
 	public static int[] insertNumber(int[] array,int index,  int number) {
-		//TODO apply method arraycopy of class System
+		
 		return null;
 	}
 	public static int[] removeNumber(int[] array,int index) {
