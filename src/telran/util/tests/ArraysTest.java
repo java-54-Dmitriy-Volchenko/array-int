@@ -73,9 +73,9 @@ class ArraysTest {
 		int[] arrayActualSameLength = Arrays.copyOf(array,  array.length );
 		int[] arrayActualLessLength = Arrays.copyOf(array, array.length -2);
 		int[] arrayActualGraterLength = Arrays.copyOf(array, array.length +1);
-		assertArrayEquals(arrayExpectedSameLength, arrayExpectedSameLength);
-		assertArrayEquals(arrayExpectedLessLength, arrayExpectedLessLength);
-		assertArrayEquals(arrayExpectedGraterLength, arrayExpectedGraterLength);
+		assertArrayEquals(arrayExpectedSameLength, arrayActualSameLength);
+		assertArrayEquals(arrayExpectedLessLength, arrayActualLessLength);
+		assertArrayEquals(arrayExpectedGraterLength, arrayActualGraterLength);
 	}
 	
 	@Test
@@ -88,7 +88,20 @@ class ArraysTest {
 	}
 	@Test
 	void binarySearchIntTest() {
-		//TODO
+		int [] unsortedArray = {25,17,14,38,21,88};
+		int key = 25;
+		assertFalse(Arrays.binarySearch(unsortedArray, key)==0);
+		assertTrue(Arrays.binarySearch(array, key)==1);
+		key=101;
+		assertEquals(-6, Arrays.binarySearch(array, key));
+		key=99;
+		assertEquals(-5, Arrays.binarySearch(array, key));
+		key=35;
+		assertEquals(-4, Arrays.binarySearch(array, key));
+		key=-35;
+		assertEquals(-1, Arrays.binarySearch(array, key));
+		key=-1;
+		assertEquals(-1, Arrays.binarySearch(array, key));
 	}
 	}
 	
