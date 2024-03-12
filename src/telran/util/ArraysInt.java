@@ -29,15 +29,17 @@ public class ArraysInt {
 	 }
 	 
 	public static int[] insertSorted(int[] sortedArray,int number) {
-		int[]newArray = newArray(sortedArray,1);
-		int res = Arrays.binarySearch(sortedArray, number);			
-		if (res>=0) {
-			newArray = insertNumber(sortedArray, res, number);
-		}
-		else {
-			newArray = insertNumber(sortedArray,-(res + 1), number);
-		}
-
-		return newArray;
+		//int[]newArray = newArray(sortedArray,1);
+		int res = Arrays.binarySearch(sortedArray, number);	
+		
+		return res>=0?insertNumber(sortedArray, res, number):insertNumber(sortedArray,-(res + 1), number);
+//		if (res>=0) {
+//			newArray = insertNumber(sortedArray, res, number);
+//		}
+//		else {
+//			newArray = insertNumber(sortedArray,-(res + 1), number);
+//		}
+//
+//		return newArray;
 	}
 }
