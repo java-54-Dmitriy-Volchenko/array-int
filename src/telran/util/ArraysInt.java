@@ -5,13 +5,20 @@ import java.util.Arrays;
 public class ArraysInt {
 	
 	public static int[] addNumber(int[] array, int number) {
-		int[]newArray = Arrays.copyOf(array, array.length+1);
+		int[]newArray = Arrays.copyOf(array, array.length+1); //repeating 1
 		newArray[newArray.length-1]=number;
 		return newArray;
 	}
 	public static int[] insertNumber(int[] array,int index,  int number) {
 		
-		return null;
+		int[]newArray = Arrays.copyOf(array, array.length+1); //repeating 1
+		
+		System.arraycopy(newArray, index, newArray, index+1, newArray.length - index - 1);
+		newArray[index] = number;
+		
+		
+		
+		return newArray;
 	}
 	public static int[] removeNumber(int[] array,int index) {
 		//TODO TODO apply method arraycopy of class System
